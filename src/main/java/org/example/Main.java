@@ -1,26 +1,27 @@
 package org.example;
 
+// Статический импорт:
+import static javax.swing.JOptionPane.showInputDialog;
+import static javax.swing.JOptionPane.showMessageDialog;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-public class Main {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
-
-        // 1. По id
-
-        driver.get("http://www.urn.su/qa/ui/basic_test/");
-
-        WebElement searchField =
-                driver.findElement(By.id("name1"));
-
-        searchField.sendKeys("topbicycle.ru");
-        searchField.submit();
-        driver.close();
-        driver.quit();
+class Demo{
+    public static void main(String[] args){
+// Текстовые переменные:
+        String txt,str;
+// Отображение окна с полем ввода:
+        txt=showInputDialog("Введите текст:");
+// Целочисленная переменная:
+        int size=txt.length();
+// Символьные переменные:
+        char A=txt.charAt(0);
+        char B=txt.charAt(size-1);
+// Формируется значение текстовой переменной:
+        str="Текст: "+txt+"\n";
+        str+="Символов в тексте: "+size+"\n";
+        str+="Первый символ: "+A+"\n";
+        str+="Последний символ: "+B;
+// Отображение диалогового окна:
+        //showMessageDialog(null,str);
+        showMessageDialog(null, str);
     }
-
 }
