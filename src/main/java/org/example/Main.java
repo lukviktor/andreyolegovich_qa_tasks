@@ -1,6 +1,8 @@
 package org.example;
 
 // Статический импорт:
+import org.openqa.selenium.By;
+
 import static javax.swing.JOptionPane.showInputDialog;
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -23,5 +25,8 @@ class Demo{
 // Отображение диалогового окна:
         //showMessageDialog(null,str);
         showMessageDialog(null, str);
+    }
+    public void noNew() {
+        final By renovation = By.xpath("//a[contains(.,'Renovation')]");
     }
 }
