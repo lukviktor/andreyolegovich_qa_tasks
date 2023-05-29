@@ -14,7 +14,8 @@ public class RenovationLinkTest extends BaseSeleniumTest {
         String textNoClick = driver.getTitle();
         driver.findElement(renovation).click();
         String textAftrClick = driver.getTitle();
-        Assertions.assertNotEquals(textNoClick, textAftrClick);
+        System.out.println(textAftrClick);
+        Assertions.assertEquals("Ремонт квартир на Коста-дель-Соль", textAftrClick);
     }
 
 
